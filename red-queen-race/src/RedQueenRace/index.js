@@ -93,21 +93,21 @@ const redQueen_alice = useWebAnimations({
 //   */
 //   var sceneries = [foreground1Movement, foreground2Movement, background1Movement, background2Movement];
   
-//   var adjustBackgroundPlayback = function() {
-//     if (redQueen_alice.playbackRate < .8) {
-//       sceneries.forEach(function(anim) {
-//         anim.playbackRate = redQueen_alice.playbackRate/2 * -1;
-//       });
-//     } else if (redQueen_alice.playbackRate > 1.2) {
-//       sceneries.forEach(function(anim) {
-//         anim.playbackRate = redQueen_alice.playbackRate/2;
-//       });
-//     } else {
-//       sceneries.forEach(function(anim) {
-//         anim.playbackRate = 0;    
-//       });
-//     }   
-//   }
+  const adjustBackgroundPlayback = () => {
+    if (redQueen_alice.playbackRate < .8) {
+      sceneries.forEach(function(anim) {
+        anim.playbackRate = redQueen_alice.playbackRate/2 * -1;
+      });
+    } else if (redQueen_alice.playbackRate > 1.2) {
+      sceneries.forEach(function(anim) {
+        anim.playbackRate = redQueen_alice.playbackRate/2;
+      });
+    } else {
+      sceneries.forEach(function(anim) {
+        anim.playbackRate = 0;    
+      });
+    }   
+  }
 //   adjustBackgroundPlayback();
   
 //   /* If Alice and the Red Queen are running at a speed of 1, the background doesn't move. */
