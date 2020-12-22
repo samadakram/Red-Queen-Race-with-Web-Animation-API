@@ -128,7 +128,7 @@ const redQueen_alice = useWebAnimations({
   
   useEffect(()=>{
       document.addEventListener("click", goFaster);
-  },[]);
+  });
   
 //   document.addEventListener("click", goFaster);
 //   document.addEventListener("touchstart", goFaster);
