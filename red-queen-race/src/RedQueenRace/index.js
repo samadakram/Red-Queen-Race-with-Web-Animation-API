@@ -97,18 +97,12 @@ const redQueen_alice = useWebAnimations({
 //   var sceneries = [foreground1Movement, foreground2Movement, background1Movement, background2Movement];
   
   const adjustBackgroundPlayback = () => {
-    if (redQueen_alice.playbackRate < .8) {
-      sceneries.forEach(function(anim) {
-        anim.playbackRate = redQueen_alice.playbackRate/2 * -1;
-      });
-    } else if (redQueen_alice.playbackRate > 1.2) {
-      sceneries.forEach(function(anim) {
-        anim.playbackRate = redQueen_alice.playbackRate/2;
-      });
+    if (playbackrateRQ < .8) {
+        playbackrateBG = (playbackrateBG / 2) * -1;
+    } else if (playbackrateRQ > 1.2) {
+        playbackrateBG = (playbackrateBG / 2);
     } else {
-      sceneries.forEach(function(anim) {
-        anim.playbackRate = 0;    
-      });
+      playbackrateBG = 0;
     }   
   }
 //   adjustBackgroundPlayback();
