@@ -24,43 +24,22 @@ export const RedQueenRace = () => {
     iterations: Infinity,
     playbackRate: playbackrateBG,
   };
-  
-//   var background1 = document.getElementById('background1');
-  
-//   var background1Movement = background1.animate(
-//   sceneryFrames, sceneryTimingBackground);
-//   background1Movement.currentTime = background1Movement.effect.timing.duration / 2;
 
 const background1Movement = useWebAnimations({
     keyframes: sceneryFrames,
     timing: sceneryTimingBackground,
 });
   
-//   var background2 = document.getElementById('background2');
-//   var background2Movement = background2.animate(
-//   sceneryFrames, sceneryTimingBackground);
-
 const background2Movement = useWebAnimations({
     keyframes: sceneryFrames,
     timing: sceneryTimingBackground,
 });
   
-
-//   var foreground1 = document.getElementById('foreground1');
-//   var foreground2 = document.getElementById('foreground2');
-  
-//   var foreground1Movement = foreground1.animate(
-//   sceneryFrames, sceneryTimingForeground);
-//   foreground1Movement.currentTime = foreground1Movement.effect.timing.duration / 2;
-
 const foreground1Movement = useWebAnimations({
     keyframes: sceneryFrames,
     timing: sceneryTimingForeground
 });
   
-//   var foreground2Movement = foreground2.animate(
-//   sceneryFrames, sceneryTimingForeground);
-
 const foreground2Movement = useWebAnimations({
     keyframes: sceneryFrames,
     timing: sceneryTimingForeground
@@ -71,17 +50,6 @@ const foreground2Movement = useWebAnimations({
     { transform: 'translateY(-100%)' }   
   ];
   
-//   var redQueen_alice_sprite = document.getElementById('red-queen_and_alice_sprite');
-  
-//   var redQueen_alice = redQueen_alice_sprite.animate(
-//   spriteFrames, {
-//     easing: 'steps(7, end)',
-//     direction: "reverse",
-//     duration: 600,
-//     playbackRate: 1,
-//     iterations: Infinity
-//   });
-
 const spirteTiming = {
     easing: "steps(7, end)",
     direction: "reverse",
@@ -94,11 +62,6 @@ const redQueen_alice = useWebAnimations({
     keyframes: spriteFrames,
     timing: spirteTiming,
 });
-  
-//   /* Alice tires so easily! 
-//     Every so many seconds, reduce their playback rate so they slow a little. 
-//   */
-//   var sceneries = [foreground1Movement, foreground2Movement, background1Movement, background2Movement];
   
   const adjustBackgroundPlayback = () => {
     if (playbackrateRQ < .8) {
@@ -113,17 +76,6 @@ const redQueen_alice = useWebAnimations({
     background1Movement.getAnimation().playbackRate = playbackrateBG;   
     background2Movement.getAnimation().playbackRate = playbackrateBG;   
   };
-//   adjustBackgroundPlayback();
-  
-//   /* If Alice and the Red Queen are running at a speed of 1, the background doesn't move. */
-//   /* But if they fall under 1, the background slides backwards */
-//   setInterval( function() {
-//     /* Set decay */
-//     if (redQueen_alice.playbackRate > .4) {
-//       redQueen_alice.playbackRate *= .9;    
-//     } 
-//     adjustBackgroundPlayback();
-//   }, 3000);
   
   useEffect(()=>{
 
@@ -149,9 +101,6 @@ const redQueen_alice = useWebAnimations({
       } );
   });
   
-//   document.addEventListener("click", goFaster);
-//   document.addEventListener("touchstart", goFaster);
-
     return (
         <div className="wrapper">
             <div className="sky"></div>
