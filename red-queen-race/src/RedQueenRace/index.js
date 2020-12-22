@@ -103,8 +103,9 @@ const redQueen_alice = useWebAnimations({
         playbackrateBG = (playbackrateBG / 2);
     } else {
       playbackrateBG = 0;
-    }   
-  }
+    }
+    foreground1Movement.getAnimation().playbackRate = playbackrateBG;   
+  };
 //   adjustBackgroundPlayback();
   
 //   /* If Alice and the Red Queen are running at a speed of 1, the background doesn't move. */
