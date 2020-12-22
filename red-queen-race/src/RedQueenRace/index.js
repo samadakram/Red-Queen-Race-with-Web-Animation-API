@@ -123,7 +123,8 @@ const redQueen_alice = useWebAnimations({
   
   useEffect(()=>{
       document.addEventListener("click", () => {
-        redQueen_alice.getAnimation().playbackRate *= 1.1;
+        playbackrateRQ *= 1.1;
+        redQueen_alice.getAnimation().playbackRate *= playbackrateRQ;
         adjustBackgroundPlayback();
       } );
   });
