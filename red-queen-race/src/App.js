@@ -5,7 +5,6 @@ import './App.css';
 function App() {
   return (
     <div>
-      <h1>Red Queen Project</h1>
       <RedQueenRace />
     </div>
   );
