@@ -61,10 +61,10 @@ const foreground2Movement = useWebAnimations({
     timing: sceneryTimingForeground
 });
   
-//   var spriteFrames = [
-//     { transform: 'translateY(0)' },
-//     { transform: 'translateY(-100%)' }   
-//   ];
+  const spriteFrames = [
+    { transform: 'translateY(0)' },
+    { transform: 'translateY(-100%)' }   
+  ];
   
 //   var redQueen_alice_sprite = document.getElementById('red-queen_and_alice_sprite');
   
@@ -76,6 +76,17 @@ const foreground2Movement = useWebAnimations({
 //     playbackRate: 1,
 //     iterations: Infinity
 //   });
+
+const redQueen_alice = useWebAnimations({
+    keyframes: spriteFrames,
+    timing: {
+        easing: 'steps(7, end)',
+        direction: "reverse",
+        duration: 600,
+        playbackRate: 1,
+        iterations: Infinity
+    }
+});
   
 //   /* Alice tires so easily! 
 //     Every so many seconds, reduce their playback rate so they slow a little. 
