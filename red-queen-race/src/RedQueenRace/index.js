@@ -4,6 +4,9 @@ import useWebAnimations from "@wellyshen/use-web-animations";
 
 export const RedQueenRace = () => {
 
+    var playbackrateRQ = 1;
+    var playbackrateBG = 0;
+
     /* Background animations */
   const sceneryFrames =   [
     { transform: 'translateX(100%)' },
