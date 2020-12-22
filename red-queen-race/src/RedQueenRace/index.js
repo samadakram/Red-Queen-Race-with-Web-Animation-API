@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './style.css';
 import useWebAnimations from "@wellyshen/use-web-animations";
 
@@ -125,6 +125,10 @@ const redQueen_alice = useWebAnimations({
     redQueen_alice.getAnimation().playbackRate *= 1.1;
     adjustBackgroundPlayback();
   }
+  
+  useEffect(()=>{
+      document.addEventListener("click", goFaster);
+  },[]);
   
 //   document.addEventListener("click", goFaster);
 //   document.addEventListener("touchstart", goFaster);
