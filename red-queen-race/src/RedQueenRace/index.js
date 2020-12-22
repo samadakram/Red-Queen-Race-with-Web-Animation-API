@@ -15,12 +15,14 @@ export const RedQueenRace = () => {
   
   const sceneryTimingBackground = {
     duration: 36000,
-    iterations: Infinity
+    iterations: Infinity,
+    playbackRate: playbackrateBG,
   };
   
   const sceneryTimingForeground = {
     duration: 12000,
-    iterations: Infinity
+    iterations: Infinity,
+    playbackRate: playbackrateBG,
   };
   
 //   var background1 = document.getElementById('background1');
@@ -80,15 +82,17 @@ const foreground2Movement = useWebAnimations({
 //     iterations: Infinity
 //   });
 
+const spirteTiming = {
+    easing: "steps(7, end)",
+    direction: "reverse",
+    duration: 600,
+    playbackRate: playbackrateRQ,
+    iterations: Infinity,
+};
+
 const redQueen_alice = useWebAnimations({
     keyframes: spriteFrames,
-    timing: {
-        easing: 'steps(7, end)',
-        direction: "reverse",
-        duration: 600,
-        playbackRate: 1,
-        iterations: Infinity
-    }
+    timing: spirteTiming,
 });
   
 //   /* Alice tires so easily! 
