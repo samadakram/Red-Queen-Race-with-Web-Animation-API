@@ -105,6 +105,9 @@ const redQueen_alice = useWebAnimations({
       playbackrateBG = 0;
     }
     foreground1Movement.getAnimation().playbackRate = playbackrateBG;   
+    foreground2Movement.getAnimation().playbackRate = playbackrateBG;   
+    background1Movement.getAnimation().playbackRate = playbackrateBG;   
+    background2Movement.getAnimation().playbackRate = playbackrateBG;   
   };
 //   adjustBackgroundPlayback();
   
