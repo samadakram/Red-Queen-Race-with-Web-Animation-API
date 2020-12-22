@@ -4,21 +4,7 @@ import useWebAnimations from "@wellyshen/use-web-animations";
 
 export const RedQueenRace = () => {
 
-    /* Background animations */
-    const sceneryFrames = [
-        { transform: 'translateX(100%)' },
-        { transform: 'translateX(-100%)' }
-    ];
-
-    const sceneryTimingBackground = {
-        duration: 36000,
-        iterations: Infinity
-    };
-
-    const sceneryTimingForeground = {
-        duration: 12000,
-        iterations: Infinity
-    };
+    
 
     return (
         <div className="wrapper">
