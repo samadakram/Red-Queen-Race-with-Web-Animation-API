@@ -122,6 +122,16 @@ const redQueen_alice = useWebAnimations({
 //   }, 3000);
   
   useEffect(()=>{
+
+    setInterval( function() {
+        //     /* Set decay */
+            if (playbackrateRQ > .4) {
+                playbackrateRQ *= 0.9;
+              redQueen_alice.getAnimation().playbackRate = playbackrateRQ;    
+            } 
+            adjustBackgroundPlayback();
+          }, 3000);
+
       document.addEventListener("click", () => {
         playbackrateRQ *= 1.1;
         redQueen_alice.getAnimation().playbackRate *= playbackrateRQ;
