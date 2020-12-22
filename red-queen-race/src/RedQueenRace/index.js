@@ -123,7 +123,7 @@ const redQueen_alice = useWebAnimations({
   const goFaster = () => {
     /* But you can speed them up by giving the screen a click or a tap. */
     redQueen_alice.getAnimation().playbackRate *= 1.1;
-    adjustBackgroundPlayback();
+    // adjustBackgroundPlayback();
   }
   
   useEffect(()=>{
