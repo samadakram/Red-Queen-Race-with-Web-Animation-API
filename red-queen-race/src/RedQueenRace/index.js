@@ -47,9 +47,19 @@ const background2Movement = useWebAnimations({
 //   var foreground1Movement = foreground1.animate(
 //   sceneryFrames, sceneryTimingForeground);
 //   foreground1Movement.currentTime = foreground1Movement.effect.timing.duration / 2;
+
+const foreground1Movement = useWebAnimations({
+    keyframes: sceneryFrames,
+    timing: sceneryTimingForeground
+});
   
 //   var foreground2Movement = foreground2.animate(
 //   sceneryFrames, sceneryTimingForeground);
+
+const foreground2Movement = useWebAnimations({
+    keyframes: sceneryFrames,
+    timing: sceneryTimingForeground
+});
   
 //   var spriteFrames = [
 //     { transform: 'translateY(0)' },
