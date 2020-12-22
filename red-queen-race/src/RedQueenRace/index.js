@@ -129,7 +129,7 @@ const redQueen_alice = useWebAnimations({
     const bganimation = background1Movement.getAnimation();
     bganimation.currentTime = bganimation.effect.getTiming().duration / 2;
 
-    setInterval( function() {
+    setInterval( () => {
         //     /* Set decay */
             if (playbackrateRQ > .4) {
                 playbackrateRQ *= 0.9;
