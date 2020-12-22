@@ -123,6 +123,12 @@ const redQueen_alice = useWebAnimations({
   
   useEffect(()=>{
 
+    const fganimation = foreground1Movement.getAnimation();
+    fganimation.currentTime = fganimation.effect.getTiming().duration / 2;
+
+    const bganimation = foreground1Movement.getAnimation();
+    bganimation.currentTime = bganimation.effect.getTiming().duration / 2;
+
     setInterval( function() {
         //     /* Set decay */
             if (playbackrateRQ > .4) {
