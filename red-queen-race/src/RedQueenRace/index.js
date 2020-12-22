@@ -98,9 +98,9 @@ const redQueen_alice = useWebAnimations({
   
   const adjustBackgroundPlayback = () => {
     if (playbackrateRQ < .8) {
-        playbackrateBG = (playbackrateBG / 2) * -1;
+        playbackrateBG = (playbackrateRQ / 2) * -1;
     } else if (playbackrateRQ > 1.2) {
-        playbackrateBG = (playbackrateBG / 2);
+        playbackrateBG = (playbackrateRQ / 2);
     } else {
       playbackrateBG = 0;
     }
